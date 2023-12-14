@@ -32,4 +32,19 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+function display(data) {
+  console.log(data);
+}
+
+async function fetchData() {
+  try {
+    const profile = await getJohnProfile();
+    display(profile);
+    const orders = await getJohnOrders();
+    display(orders);
+  } catch (error) {
+    display(error);
+  }
+}
+
+fetchData();

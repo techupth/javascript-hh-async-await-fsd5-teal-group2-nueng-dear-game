@@ -12,4 +12,14 @@ let getJohnProfile = () => {
     );
   });
 };
-// Start coding here
+
+function display(data) {
+  console.log(data);
+}
+
+async function getData() {
+  const profile = await getJohnProfile();
+  display(profile);
+}
+
+getData();

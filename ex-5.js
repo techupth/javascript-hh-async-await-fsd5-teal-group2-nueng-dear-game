@@ -11,4 +11,18 @@ let getJohnProfile = () => {
     );
   });
 };
-// Start coding here
+
+function display(data) {
+  console.log(data);
+}
+
+async function fetchData() {
+  try {
+    const profile = await getJohnProfile();
+    display(profile);
+  } catch (error) {
+    display(error);
+  }
+}
+
+fetchData();
