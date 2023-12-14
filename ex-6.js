@@ -1,3 +1,5 @@
+//const { error } = require("console");
+
 // Exercise #6
 let getJohnProfile = () => {
   return new Promise(function (resolve) {
@@ -33,3 +35,22 @@ let getJohnOrders = () => {
 };
 
 // Start coding here
+let profile = async function () {
+  return getJohnProfile();
+};
+let order = async function () {
+  return getJohnOrders();
+};
+
+async function getProfileAndOrder() {
+  try {
+    const getProfile = await profile();
+    console.log(getProfile);
+    const getOrder = await order();
+    console.log(getOrder);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getProfileAndOrder();
