@@ -1,3 +1,5 @@
+//const { profile } = require("console");
+
 // Exercise #4
 let getJohnProfile = () => {
   return new Promise(function (resolve) {
@@ -13,3 +15,14 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+
+let johnProfile = async () => {
+  return getJohnProfile();
+};
+
+async function getProfile() {
+  const data = await johnProfile();
+  console.log(data);
+}
+
+getProfile();
