@@ -32,15 +32,24 @@ let getJohnOrders = () => {
   });
 };
 
+// getJohnProfile()
+//   .then((profile) => {
+//     display(profile);
+//     return getJohnOrders();
+//   })
+//   .then((orders) => {
+//     display(orders);
+//   });
+
+// function display(data) {
+//   console.log(data);
+// }
+
 getJohnProfile()
   .then((profile) => {
-    display(profile);
+    console.log(profile);
     return getJohnOrders();
   })
   .then((orders) => {
-    display(orders);
+    console.log(orders);
   });
-
-function display(data) {
-  console.log(data);
-}

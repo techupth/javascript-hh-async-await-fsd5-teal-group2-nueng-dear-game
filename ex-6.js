@@ -32,19 +32,32 @@ let getJohnOrders = () => {
   });
 };
 
-function display(data) {
-  console.log(data);
-}
-
 async function fetchData() {
   try {
     const profile = await getJohnProfile();
-    display(profile);
+    console.log(profile);
     const orders = await getJohnOrders();
-    display(orders);
+    console.log(orders);
   } catch (error) {
-    display(error);
+    console.error(error);
   }
 }
 
 fetchData();
+
+// function display(data) {
+//   console.log(data);
+// }
+
+// async function fetchData() {
+//   try {
+//     const profile = await getJohnProfile();
+//     display(profile);
+//     const orders = await getJohnOrders();
+//     display(orders);
+//   } catch (error) {
+//     display(error);
+//   }
+// }
+
+// fetchData();

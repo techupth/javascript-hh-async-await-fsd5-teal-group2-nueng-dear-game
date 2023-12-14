@@ -13,13 +13,20 @@ let getJohnProfile = () => {
   });
 };
 
-function display(data) {
-  console.log(data);
-}
-
-async function getData() {
+async function getdata() {
   const profile = await getJohnProfile();
-  display(profile);
+  console.log(profile);
 }
 
-getData();
+getdata();
+
+// function display(data) {
+//   console.log(data);
+// }
+
+// async function getData() {
+//   const profile = await getJohnProfile();
+//   display(profile);
+// }
+
+// getData();

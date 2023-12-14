@@ -12,17 +12,28 @@ let getJohnProfile = () => {
   });
 };
 
-function display(data) {
-  console.log(data);
-}
-
 async function fetchData() {
   try {
-    const profile = await getJohnProfile();
-    display(profile);
+    const result = await getJohnProfile();
+    console.log(result);
   } catch (error) {
-    display(error);
+    console.log(error);
   }
 }
 
 fetchData();
+
+// function display(data) {
+//   console.log(data);
+// }
+
+// async function fetchData() {
+//   try {
+//     const profile = await getJohnProfile();
+//     display(profile);
+//   } catch (error) {
+//     display(error);
+//   }
+// }
+
+// fetchData();

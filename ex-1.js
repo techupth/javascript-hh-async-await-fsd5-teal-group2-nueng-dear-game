@@ -15,8 +15,10 @@ let getJohnProfile = () => {
 };
 // Start coding here
 
-getJohnProfile().then(display);
+// getJohnProfile().then(display);
 
-function display(data) {
-  console.log(data);
-}
+// function display(data) {
+//   console.log(data);
+// }
+
+getJohnProfile().then((data) => console.log(data));
